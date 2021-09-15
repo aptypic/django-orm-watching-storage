@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import timedelta
 
 
 class Passcard(models.Model):
@@ -23,5 +24,18 @@ class Visit(models.Model):
         return '{user} entered at {entered} {leaved}'.format(
             user=self.passcard.owner_name,
             entered=self.entered_at,
-            leaved= 'leaved at ' + str(self.leaved_at) if self.leaved_at else 'not leaved'
+            leaved='leaved at ' + str(self.leaved_at) if self.leaved_at else 'not leaved'
         )
+
+
+def get_duration(start_time, end_time):
+    duration = end_time - start_time
+    return duration.seconds
+
+
+def format_duration(duration):
+    return str(timedelta(seconds=duration))
+
+
+def is_visit_long(duration, minutes=60):
+    return duration // 60 > minutes
