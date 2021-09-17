@@ -17,7 +17,7 @@ def passcard_info_view(request, passcode):
         }
         this_passcard_visits_list.append(this_passcard_visits)
     context = {
-        'passcard': passcard_passcode,
+        'passcard': passcard,
         'this_passcard_visits': this_passcard_visits_list,
     }
     return render(request, 'passcard_info.html', context)
