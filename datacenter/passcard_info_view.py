@@ -7,8 +7,8 @@ from django.shortcuts import render
 
 def passcard_info_view(request, passcode):
     this_passcard_visits_list = []
-    passcard_passcode = Passcard.objects.get(passcode=passcode)
-    for visit in Visit.objects.filter(passcard=passcard_passcode, leaved_at__isnull=False):
+    passcard = Passcard.objects.get(passcode=passcode)
+    for visit in Visit.objects.filter(passcard=passcard, leaved_at__isnull=False):
         duration = get_duration(visit.entered_at, visit.leaved_at)
         this_passcard_visits = {
             'entered_at': visit.entered_at,
