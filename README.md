@@ -2,10 +2,6 @@
 
 Writing the console for helping security manage checkpoint (django+postgres)
 
-## Getting Started
-
-Just launch main.py and check https://0.0.0.0:8000
-
 ### Prerequisites
 
 Python3 should be already installed. Then use pip (or pip3, if there is a conflict with Python2) to install dependencies:
@@ -17,6 +13,7 @@ pip install -r requirements.txt
 ```
 python main.py
 ```
+After that you should to check http://0.0.0.0:8000
 
 ## Contributing
 
