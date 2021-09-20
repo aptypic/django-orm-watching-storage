@@ -22,4 +22,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* devman.org
+* [devman.org](https://devman.org)
