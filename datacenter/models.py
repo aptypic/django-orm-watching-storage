@@ -30,7 +30,7 @@ class Visit(models.Model):
 
 def get_duration(start_time, end_time):
     duration = end_time - start_time
-    return duration.seconds
+    return int(duration.total_seconds())
 
 
 def format_duration(duration):
