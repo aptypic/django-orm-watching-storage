@@ -10,7 +10,7 @@ Just launch main.py and check https://0.0.0.0:8000
 
 Python3 should be already installed. Then use pip (or pip3, if there is a conflict with Python2) to install dependencies:
 
-pip install pytz==2017.2 && django==1.11.* && psycopg2-binary==2.8.*
+pip install -r requirements.txt
 
 ## Contributing
 

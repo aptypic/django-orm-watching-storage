@@ -1,2 +1,4 @@
-requirements.txt
 .idea
+poetry.lock
+pyproject.toml
+.replit
